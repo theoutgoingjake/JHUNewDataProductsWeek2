@@ -1,0 +1,42 @@
+---
+title: Developing Data Products Week 2 Assignment by John Hopkins University through
+  Coursera
+author: "Niño Lito Jake Briones"
+date: "August 20, 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## INSTRUCTION:
+Create a web page using R Markdown that features a map created with Leaflet.
+
+Host your webpage on either GitHub Pages, RPubs, or NeoCities.
+
+Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. We would love to see you show off your creativity!
+
+## CRITERIA:
+The rubric contains the following two questions:
+
+1.Does the web page feature a date and is this date less than two months before the date that you're grading this assignment?
+
+
+2. Does the web page feature an interactive map that appears to have been created with Leaflet?
+
+## SUBMISSION:
+
+I created a pop up map of my hometown here in the Philippines.
+
+```{r}
+library(leaflet)
+
+Laguna <- leaflet() %>%
+  addTiles() %>%
+addMarkers(lat=14.0642, lng=121.3233, popup = "My Hometown")
+
+Laguna
+```
+
+
